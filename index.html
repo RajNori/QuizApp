@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Countdown</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <header class="headerBackdrop" id="scoretime">
+        <div class="highscores">View Highscores</div>
+        <div class="timer">Timer : <span id="countdownTimer">--</span></div>
+    </header>
+
+    <div class="container" id="container">
+        <section>
+            <div class="instructions" id="instructions">
+                <h1>Coding Quiz Challenge</h1>
+                <p>
+                    Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds
+                </p>
+                <button id="start-quiz_Btn">Start Quiz</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Quiz section & new screen -->
+
+    <div id="start_quiz">
+        <div id="quiz_body">
+            <h2 id="questionNo"></h2>
+            <h2 id="question"></h2>
+        </div>
+        <div id="choiceList">
+            <!-- Quiz choices below for selection -->
+            <h4 class="choices" id="option1"><span>1.</span></h4>
+            <h4 class="choices" id="option2"><span>2.</span></h4>
+            <h4 class="choices" id="option3"><span>3.</span></h4>
+            <h4 class="choices" id="option4"><span>4.</span></h4>
+            <button id="nextButton">Next</button>
+            <div class="result" id="instant_feedback">
+                <h6 class="result" id="correct1">Correct</h6>
+                <h6 class="result" id="correct2">Incorrect</h6>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results screen -->
+    <div id="resultScreen">
+        <h1 id="endHeader">All done!</h1>
+        <p id="finalscore"></p> Your final score is <span id="finalScoretimer"></span></p>
+        <div id="finalForm">
+            <!-- <form id="userForm"> -->
+            <label for="name">Your initials:</label>
+            <input type="text" name="Initials" id="userInput">
+            <!-- </form> -->
+            <button type="submit" id="submitBtn">Submit</button>
+        </div>
+
+    </div>
+    <!-- High Scores Screen -->
+    <div class="highscores" id="high_scores">
+        <h1 id="insertScores">Highscores: </h1>
+        <ul id="score_counter">
+        </ul>
+        <button id="backBtn">Go Back</button>
+        <button id="clearScores">Clear HighScores</button>
+    </div>
+</body>
+<script src="./app.js"></script>
+
+</html>
